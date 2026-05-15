@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Bowl -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M2,12C2,15.31 4.69,18 8,18H16C19.31,18 22,15.31 22,12H2M16,6L14,4L12,6L10,4L8,6L12,10L16,6Z" />
+    <!-- Leaf -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M17,8C17,8 14.8,8.1 13.5,9.5C12.2,10.9 12,13 12,13C12,13 14.1,13.2 15.5,11.8C16.9,10.5 17,8 17,8Z" />
+</vector>

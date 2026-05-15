@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_food_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_food_app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FOODSHARe">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".OnboardingActivity" />
+        <activity android:name=".LanguageActivity" />
+        <activity android:name=".LocationActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".DonorHomeActivity" />
+        <activity android:name=".PostFoodStep1Activity" />
+        <activity android:name=".PostFoodStep2Activity" />
+        <activity android:name=".PostFoodStep3Activity" />
+        <activity android:name=".PostSuccessActivity" />
+        <activity android:name=".MyListingsActivity" />
+        <activity android:name=".ImpactDashboardActivity" />
+        <activity android:name=".ReceiverBrowseActivity" />
+        <activity android:name=".FoodDetailActivity" />
+        <activity android:name=".NearbyMapActivity" />
+        <activity android:name=".ClaimConfirmActivity" />
+        <activity android:name=".MyClaimsActivity" />
+        <activity android:name=".NGODashboardActivity" />
+        <activity android:name=".NGOPickupScheduleActivity" />
+        <activity android:name=".NGOBrowseActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AboutAiActivity" />
+        <activity android:name=".ChatAssistantActivity" />
+
+    </application>
+
+</manifest>

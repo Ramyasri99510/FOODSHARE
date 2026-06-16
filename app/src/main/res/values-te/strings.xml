@@ -60,4 +60,39 @@
     <string name="families">కుటుంబాలు</string>
     <string name="scheduled_pickups">షెడ్యూల్ చేసిన పికప్‌లు</string>
     <string name="browse_donations">విరాళాలను బ్రౌజ్ చేయండి</string>
+
+    <!-- About AI Screen -->
+    <string name="intelligence_at_foodshare">ఫుడ్ షేర్ వద్ద మేధస్సు</string>
+    <string name="ai_smart_expiry_title">AI స్మార్ట్ ఎక్స్‌పైరీ ప్రిడిక్టర్</string>
+    <string name="ai_smart_expiry_desc">ఉత్తమ ఎక్స్‌పైరీ సమయాన్ని స్వయంచాలకంగా లెక్కించడానికి ఆహార వర్గం మరియు రకాన్ని విశ్లేషించే శిక్షణ పొందిన అంచనా నమూనాను ఫుడ్ షేర్ ఉపయోగిస్తుంది. ఈ నమూనా 10 ఆహార వర్గాలను కవర్ చేస్తూ ఫుడ్ సైన్స్ డేటాపై శిక్షణ పొందింది, ఎక్స్‌పైరీ అంచనాలో 95% ఖచ్చితత్వాన్ని కలిగి ఉంది.</string>
+    <string name="ai_smart_expiry_tech">మెషిన్ లెర్నింగ్ · రూల్-బేస్డ్ మోడల్ · జావా</string>
+    <string name="gemini_ai_chat_title">జెమినీ AI చాట్ అసిస్టెంట్</string>
+    <string name="gemini_ai_chat_desc">దాతలకు మరియు గ్రహీతలకు 24/7 తెలివైన సహాయాన్ని అందించడానికి ఫుడ్ షేర్ గూగుల్ జెమినీ AIని అనుసంధానిస్తుంది. చాట్‌బాట్ 5 భారతీయ భాషలలో సహజ భాషను అర్థం చేసుకుంటుంది మరియు వినియోగదారులకు యాప్‌ను నావిగేట్ చేయడానికి సహాయపడుతుంది.</string>
+    <string name="gemini_ai_chat_tech">గూగుల్ జెమినీ API · NLP · బహుభాషా</string>
+    <string name="ai_impact_stats">AI ప్రభావ గణాంకాలు</string>
+    <string name="stat_food_categories">• గుర్తించబడిన ఆహార వర్గాలు: 10+</string>
+    <string name="stat_languages">• మద్దతు ఉన్న భాషలు: 5</string>
+    <string name="stat_accuracy">• సగటు అంచనా ఖచ్చితత్వం: 95%</string>
+    <string name="powered_by_tech">పవర్డ్ బై: గూగుల్ జెమినీ AI + ఫుడ్ షేర్ ML</string>
+
+    <!-- Post Food Flow -->
+    <string name="step_1_title">దశ 1: ఆహార వివరాలు</string>
+    <string name="upload_photo">ఫోటో అప్‌లోడ్ చేయండి</string>
+    <string name="ai_accept_btn">అంగీకరించు</string>
+    <string name="ai_predicting_msg">గడువు ముగిసే సమయాన్ని అంచనా వేస్తోంది…</string>
+
+    <!-- Success Screen -->
+    <string name="estimated_impact">అంచనా ప్రభావం</string>
+    <string name="impact_summary">• 10 మందికి ఆహారం అందిస్తుంది\n• 2.5kg CO2 ఆదా చేస్తుంది</string>
+
+    <string name="ob_title_1">ఆహార వృధాను తగ్గించండి</string>
+    <string name="ob_desc_1">మిగులు ఆహారం అవసరమైన వారికి చేరుతుందని నిర్ధారించుకోవడానికి సమీపంలోని గ్రహీతలు మరియు NGOలతో కనెక్ట్ అవ్వండి.</string>
+    <string name="ob_title_2">సులభమైన విరాళం</string>
+    <string name="ob_desc_2">కేవలం కొన్ని దశల్లో మీ మిగులు ఆహారాన్ని పోస్ట్ చేయండి మరియు అది క్లెయిమ్ చేయబడినప్పుడు నోటిఫికేషన్ పొందండి.</string>
+    <string name="ob_title_3">ప్రభావాన్ని ట్రాక్ చేయండి</string>
+    <string name="ob_desc_3">భాగస్వామ్యం చేయబడిన భోజనం మరియు ఆదా చేయబడిన CO2 పరంగా మీ విరాళాల నిజ-ప్రపంచ ప్రభావాన్ని చూడండి.</string>
+    <string name="ai_suggestion">🤖 AI సూచన</string>
+    <string name="ai_predicting">గడువు ముగిసే సమయాన్ని అంచనా వేస్తోంది…</string>
+    <string name="ai_accept">అంగీకరించు</string>
+    <string name="powered_by_ai">ఫుడ్ షేర్ AI ద్వారా అందించబడింది</string>
 </resources>

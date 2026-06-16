@@ -9,14 +9,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 public class OnboardingActivity extends BaseActivity {
 
     private ViewPager2 viewPager;
-    private Button btnNext, btnSkip;
+    private Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class OnboardingActivity extends BaseActivity {
 
         viewPager = findViewById(R.id.viewPager);
         btnNext = findViewById(R.id.btnNext);
-        btnSkip = findViewById(R.id.btnSkip);
+        Button btnSkip = findViewById(R.id.btnSkip);
 
         OnboardingAdapter adapter = new OnboardingAdapter();
         viewPager.setAdapter(adapter);
@@ -44,9 +43,9 @@ public class OnboardingActivity extends BaseActivity {
             @Override
             public void onPageSelected(int position) {
                 if (position == 2) {
-                    btnNext.setText("Get Started");
+                    btnNext.setText(R.string.get_started);
                 } else {
-                    btnNext.setText("Next");
+                    btnNext.setText(R.string.next);
                 }
             }
         });
@@ -58,14 +57,10 @@ public class OnboardingActivity extends BaseActivity {
         finish();
     }
 
-    private class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.ViewHolder> {
+    private static class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.ViewHolder> {
 
-        private final String[] titles = {"Reduce Food Waste", "Easy Donation", "Track Impact"};
-        private final String[] descriptions = {
-                "Connect with nearby receivers and NGOs to ensure surplus food reaches those in need.",
-                "Post your surplus food in just a few steps and get notified when it's claimed.",
-                "See the real-world impact of your donations in terms of meals shared and CO2 saved."
-        };
+        private final int[] titles = {R.string.ob_title_1, R.string.ob_title_2, R.string.ob_title_3};
+        private final int[] descriptions = {R.string.ob_desc_1, R.string.ob_desc_2, R.string.ob_desc_3};
 
         @NonNull
         @Override
@@ -85,7 +80,7 @@ public class OnboardingActivity extends BaseActivity {
             return 3;
         }
 
-        class ViewHolder extends RecyclerView.ViewHolder {
+        static class ViewHolder extends RecyclerView.ViewHolder {
             TextView title, description;
 
             ViewHolder(View itemView) {

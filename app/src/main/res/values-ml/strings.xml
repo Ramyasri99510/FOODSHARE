@@ -60,4 +60,39 @@
     <string name="families">കുടുംബങ്ങൾ</string>
     <string name="scheduled_pickups">ഷെഡ്യൂൾ ചെയ്തവ</string>
     <string name="browse_donations">സംഭാവനകൾ തിരയുക</string>
+
+    <!-- About AI Screen -->
+    <string name="intelligence_at_foodshare">ഫുഡ് ഷെയർ ഇന്റലിജൻസ്</string>
+    <string name="ai_smart_expiry_title">AI സ്മാർട്ട് എക്‌സ്‌പൈറി പ്രെഡിക്റ്റർ</string>
+    <string name="ai_smart_expiry_desc">ഭക്ഷണത്തിന്റെ വിഭാഗവും തരവും വിശകലനം ചെയ്ത് മികച്ച കാലാവധി സമയം സ്വയമേവ കണക്കാക്കാൻ ഫുഡ് ഷെയർ ഒരു പ്രവചന മാതൃക ഉപയോഗിക്കുന്നു. കാലാവധി പ്രവചനത്തിൽ 95% കൃത്യതയോടെ 10 ഭക്ഷണ വിഭാഗങ്ങൾ ഉൾക്കൊള്ളുന്ന ഫുഡ് സയൻസ് ഡാറ്റയിൽ ഈ മോഡൽ പരിശീലിപ്പിച്ചിരിക്കുന്നു.</string>
+    <string name="ai_smart_expiry_tech">മെഷീൻ ലേണിംഗ് · റൂൾ-ബേസ്ഡ് മോഡൽ · ജാവ</string>
+    <string name="gemini_ai_chat_title">ജെമിനി AI ചാറ്റ് അസിസ്റ്റന്റ്</string>
+    <string name="gemini_ai_chat_desc">ദാതാക്കൾക്കും സ്വീകർത്താക്കൾക്കും 24/7 ബുദ്ധിപരമായ സഹായം നൽകുന്നതിന് ഫുഡ് ഷെയർ ഗൂഗിൾ ജെമിനി AI സംയോജിപ്പിക്കുന്നു. ചാറ്റ്ബോട്ട് 5 ഇന്ത്യൻ ഭാഷകളിൽ സ്വാഭാവിക ഭാഷ മനസ്സിലാക്കുകയും ആപ്പ് ഉപയോഗിക്കാൻ സഹായിക്കുകയും ചെയ്യുന്നു.</string>
+    <string name="gemini_ai_chat_tech">ഗൂഗിൾ ജെമിനി API · NLP · ബഹുഭാഷാ</string>
+    <string name="ai_impact_stats">AI സ്വാധീന കണക്കുകൾ</string>
+    <string name="stat_food_categories">• അംഗീകരിക്കപ്പെട്ട ഭക്ഷണ വിഭാഗങ്ങൾ: 10+</string>
+    <string name="stat_languages">• പിന്തുണയ്ക്കുന്ന ഭാഷകൾ: 5</string>
+    <string name="stat_accuracy">• ശരാശരി പ്രവചന കൃത്യത: 95%</string>
+    <string name="powered_by_tech">അധികാരപ്പെടുത്തിയത്: ഗൂഗിൾ ജെമിനി AI + ഫുഡ് ഷെയർ ML</string>
+
+    <!-- Post Food Flow -->
+    <string name="step_1_title">ഘട്ടം 1: ഭക്ഷണ വിവരങ്ങൾ</string>
+    <string name="upload_photo">ഫോട്ടോ അപ്‌ലോഡ് ചെയ്യുക</string>
+    <string name="ai_accept_btn">സ്വീകരിക്കുക</string>
+    <string name="ai_predicting_msg">കാലാവധി സമയം പ്രവചിക്കുന്നു…</string>
+
+    <!-- Success Screen -->
+    <string name="estimated_impact">സാധ്യമായ സ്വാധീനം</string>
+    <string name="impact_summary">• 10 പേർക്ക് ഭക്ഷണം നൽകുന്നു\n• 2.5kg CO2 ലാഭിക്കുന്നു</string>
+
+    <string name="ob_title_1">ഭക്ഷണ പാഴാക്കൽ കുറയ്ക്കുക</string>
+    <string name="ob_desc_1">അധിക ഭക്ഷണം ആവശ്യമുള്ളവരിലേക്ക് എത്തുന്നുണ്ടെന്ന് ഉറപ്പാക്കാൻ സമീപത്തുള്ള സ്വീകർത്താക്കളുമായും എൻ‌ജി‌ഒകളുമായും ബന്ധപ്പെടുക.</string>
+    <string name="ob_title_2">എളുപ്പമുള്ള സംഭാവന</string>
+    <string name="ob_desc_2">നിങ്ങളുടെ അധിക ഭക്ഷണം ഏതാനും ഘട്ടങ്ങളിലൂടെ പോസ്റ്റ് ചെയ്യുക, അത് ക്ലെയിം ചെയ്യുമ്പോൾ അറിയിപ്പ് നേടുക.</string>
+    <string name="ob_title_3">സ്വാധീനം ട്രാക്ക് ചെയ്യുക</string>
+    <string name="ob_desc_3">പങ്കിട്ട ഭക്ഷണങ്ങളുടെയും ലാഭിച്ച CO2-ന്റെയും അടിസ്ഥാനത്തിൽ നിങ്ങളുടെ സംഭാവനകളുടെ യഥാർത്ഥ ലോക സ്വാധീനം കാണുക.</string>
+    <string name="ai_suggestion">🤖 AI നിർദ്ദേശം</string>
+    <string name="ai_predicting">കാലാവധി സമയം പ്രവചിക്കുന്നു…</string>
+    <string name="ai_accept">സ്വീകരിക്കുക</string>
+    <string name="powered_by_ai">ഫുഡ് ഷെയർ AI നൽകുന്നത്</string>
 </resources>

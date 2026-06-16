@@ -43,9 +43,10 @@
                     android:orientation="vertical"
                     android:padding="16dp">
                     <TextView
+                        android:id="@+id/tvTotalKg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="45 kg"
+                        android:text="0 kg"
                         android:textColor="@color/primary"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -71,9 +72,10 @@
                     android:orientation="vertical"
                     android:padding="16dp">
                     <TextView
+                        android:id="@+id/tvTotalMeals"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="120"
+                        android:text="0"
                         android:textColor="@color/secondary"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -99,9 +101,10 @@
                     android:orientation="vertical"
                     android:padding="16dp">
                     <TextView
+                        android:id="@+id/tvCo2Saved"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15 kg"
+                        android:text="0 kg"
                         android:textColor="@color/accent"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -127,9 +130,10 @@
                     android:orientation="vertical"
                     android:padding="16dp">
                     <TextView
+                        android:id="@+id/tvDonationsCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="18"
+                        android:text="0"
                         android:textColor="@color/primary"
                         android:textSize="20sp"
                         android:textStyle="bold" />

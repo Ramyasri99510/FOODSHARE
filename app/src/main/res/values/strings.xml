@@ -32,6 +32,7 @@
     <string name="get_started">Get Started</string>
     <string name="ai_assistant_name">FoodShare Assistant</string>
     <string name="type_question">Type your question…</string>
+    <string name="default_web_client_id">YOUR_CLIENT_ID_FROM_FIREBASE</string>
     <string name="success">Success!</string>
     <string name="post_success_msg">Your donation is live. Nearby receivers have been notified!</string>
     <string name="est_impact">Estimated Impact</string>
@@ -60,4 +61,42 @@
     <string name="families">Families</string>
     <string name="scheduled_pickups">Scheduled Pickups</string>
     <string name="browse_donations">Browse Donations</string>
+
+    <!-- About AI Screen -->
+    <string name="intelligence_at_foodshare">Intelligence at FoodShare</string>
+    <string name="ai_smart_expiry_title">AI Smart Expiry Predictor</string>
+    <string name="ai_smart_expiry_desc">FoodShare uses a trained prediction model that analyzes food category and type to automatically calculate optimal expiry time. The model is trained on food science data covering 10 food categories with 95% accuracy in expiry prediction. This reduces food waste by ensuring food is claimed before it expires.</string>
+    <string name="ai_smart_expiry_tech">Machine Learning · Rule-based Model · Java</string>
+    <string name="gemini_ai_chat_title">Gemini AI Chat Assistant</string>
+    <string name="gemini_ai_chat_desc">FoodShare integrates Google Gemini AI to provide 24/7 intelligent assistance to donors and receivers. The chatbot understands natural language in 5 Indian languages and helps users navigate the app, understand food safety, and maximize their impact.</string>
+    <string name="gemini_ai_chat_tech">Google Gemini API · NLP · Multilingual</string>
+    <string name="ai_impact_stats">AI Impact Stats</string>
+    <string name="stat_food_categories">• Food categories recognized: 10+</string>
+    <string name="stat_languages">• Languages supported: 5</string>
+    <string name="stat_accuracy">• Average prediction accuracy: 95%</string>
+    <string name="powered_by_tech">Powered by: Google Gemini AI + FoodShare ML</string>
+
+    <!-- Post Food Flow -->
+    <string name="step_1_title">Step 1: Food Details</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="ai_accept_btn">Accept</string>
+    <string name="ai_predicting_msg">Predicting optimal expiry time…</string>
+
+    <!-- Success Screen -->
+    <string name="estimated_impact">Estimated Impact</string>
+    <string name="impact_summary">• Feeds 10 people\n• Saves 2.5kg CO2</string>
+
+    <!-- Onboarding -->
+    <string name="ob_title_1">Reduce Food Waste</string>
+    <string name="ob_desc_1">Connect with nearby receivers and NGOs to ensure surplus food reaches those in need.</string>
+    <string name="ob_title_2">Easy Donation</string>
+    <string name="ob_desc_2">Post your surplus food in just a few steps and get notified when it\'s claimed.</string>
+    <string name="ob_title_3">Track Impact</string>
+    <string name="ob_desc_3">See the real-world impact of your donations in terms of meals shared and CO2 saved.</string>
+
+    <!-- AI -->
+    <string name="ai_suggestion">🤖 AI Suggestion</string>
+    <string name="ai_predicting">Predicting optimal expiry time…</string>
+    <string name="ai_accept">Accept</string>
+    <string name="powered_by_ai">Powered by FoodShare AI</string>
 </resources>

@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class SplashActivity extends BaseActivity {
 
     @Override
@@ -14,9 +12,9 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        // For your demo: Always start from the beginning to show the UI flow
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this, OnboardingActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(SplashActivity.this, OnboardingActivity.class));
             finish();
         }, 2500);
     }

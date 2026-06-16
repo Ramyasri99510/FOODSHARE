@@ -60,4 +60,39 @@
     <string name="families">குடும்பங்கள்</string>
     <string name="scheduled_pickups">திட்டமிடப்பட்ட பிக்கப்கள்</string>
     <string name="browse_donations">பதிவுகளைத் தேடுங்கள்</string>
+
+    <!-- About AI Screen -->
+    <string name="intelligence_at_foodshare">புட்சேர் நுண்ணறிவு</string>
+    <string name="ai_smart_expiry_title">AI ஸ்மார்ட் காலாவதி கணிப்பான்</string>
+    <string name="ai_smart_expiry_desc">உகந்த காலாவதி நேரத்தைத் தானாகக் கணக்கிட உணவு வகை மற்றும் வகையைப் பகுப்பாய்வு செய்யும் பயிற்சி பெற்ற கணிப்பு மாதிரியை புட்சேர் பயன்படுத்துகிறது. இந்த மாதிரி 10 உணவு வகைகளை உள்ளடக்கிய உணவு அறிவியல் தரவுகளில் பயிற்றுவிக்கப்பட்டுள்ளது, காலாவதி கணிப்பில் 95% துல்லியம் கொண்டது. இது உணவு வீணாவதைத் தடுக்கிறது.</string>
+    <string name="ai_smart_expiry_tech">இயந்திர கற்றல் · விதி அடிப்படையிலான மாதிரி · ஜாவா</string>
+    <string name="gemini_ai_chat_title">ஜெமினி AI அரட்டை உதவியாளர்</string>
+    <string name="gemini_ai_chat_desc">கொடையாளர்கள் மற்றும் பெறுநர்களுக்கு 24/7 புத்திசாலித்தனமான உதவியை வழங்க புட்சேர் கூகிள் ஜெமினி AI ஐ ஒருங்கிணைக்கிறது. அரட்டை மென்பொருள் 5 இந்திய மொழிகளில் இயல்பான மொழியைப் புரிந்துகொள்கிறது மற்றும் பயனர்களுக்கு செயலியை வழிநடத்தவும், உணவு பாதுகாப்பைப் புரிந்துகொள்ளவும் உதவுகிறது.</string>
+    <string name="gemini_ai_chat_tech">கூகிள் ஜெமினி API · NLP · பன்மொழி</string>
+    <string name="ai_impact_stats">AI தாக்க புள்ளிவிவரங்கள்</string>
+    <string name="stat_food_categories">• அங்கீகரிக்கப்பட்ட உணவு வகைகள்: 10+</string>
+    <string name="stat_languages">• ஆதரிக்கப்படும் மொழிகள்: 5</string>
+    <string name="stat_accuracy">• சராசரி கணிப்பு துல்லியம்: 95%</string>
+    <string name="powered_by_tech">ஆற்றல்: கூகிள் ஜெமினி AI + புட்சேர் ML</string>
+
+    <!-- Post Food Flow -->
+    <string name="step_1_title">படி 1: உணவு விவரங்கள்</string>
+    <string name="upload_photo">புகைப்படத்தைப் பதிவேற்றவும்</string>
+    <string name="ai_accept_btn">ஏற்றுக்கொள்</string>
+    <string name="ai_predicting_msg">சிறந்த காலாவதி நேரத்தைக் கணிக்கிறது…</string>
+
+    <!-- Success Screen -->
+    <string name="estimated_impact">மதிப்பிடப்பட்ட தாக்கம்</string>
+    <string name="impact_summary">• 10 பேருக்கு உணவளிக்கிறது\n• 2.5 கிலோ CO2 சேமிக்கிறது</string>
+
+    <string name="ob_title_1">உணவு வீணாவதைக் குறைக்கவும்</string>
+    <string name="ob_desc_1">அருகிலுள்ள பெறுநர்கள் மற்றும் தன்னார்வ தொண்டு நிறுவனங்களுடன் இணைந்து உபரி உணவு தேவையுள்ளவர்களைச் சென்றடைவதை உறுதி செய்யவும்.</string>
+    <string name="ob_title_2">எளிதான தானம்</string>
+    <string name="ob_desc_2">உங்கள் உபரி உணவை சில படிகளில் பதிவிட்டு, அது பெறப்படும்போது அறிவிப்பைப் பெறுங்கள்.</string>
+    <string name="ob_title_3">தாக்கத்தைக் கண்காணிக்கவும்</string>
+    <string name="ob_desc_3">பகிர்ந்து கொள்ளப்பட்ட உணவுகள் மற்றும் சேமிக்கப்பட்ட CO2 ஆகியவற்றின் அடிப்படையில் உங்கள் நன்கொடைகளின் நிஜ உலகத் தாக்கத்தைப் பாருங்கள்.</string>
+    <string name="ai_suggestion">🤖 AI பரிந்துரை</string>
+    <string name="ai_predicting">சிறந்த காலாவதி நேரத்தைக் கணிக்கிறது…</string>
+    <string name="ai_accept">ஏற்றுக்கொள்</string>
+    <string name="powered_by_ai">புட்சேர் AI மூலம் இயக்கப்படுகிறது</string>
 </resources>

@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +19,6 @@ import java.util.List;
 
 public class LanguageActivity extends BaseActivity {
 
-    private Button btnContinue;
     private int selectedPosition = 0;
 
     @Override
@@ -29,7 +27,7 @@ public class LanguageActivity extends BaseActivity {
         setContentView(R.layout.activity_language);
 
         RecyclerView rvLanguages = findViewById(R.id.rvLanguages);
-        btnContinue = findViewById(R.id.btnContinue);
+        Button btnContinue = findViewById(R.id.btnContinue);
 
         List<LanguageModel> languages = new ArrayList<>();
         languages.add(new LanguageModel("English", "English", "en"));
@@ -46,11 +44,7 @@ public class LanguageActivity extends BaseActivity {
         btnContinue.setOnClickListener(v -> {
             LanguageModel selected = languages.get(selectedPosition);
             LocaleHelper.setLocale(this, selected.isoCode);
-            
-            // Clear task and restart from LocationActivity in new language
-            Intent intent = new Intent(LanguageActivity.this, LocationActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
+            startActivity(new Intent(LanguageActivity.this, LocationActivity.class));
             finish();
         });
     }
@@ -85,10 +79,10 @@ public class LanguageActivity extends BaseActivity {
             holder.textEnglish.setText(language.englishName);
 
             if (position == selectedPosition) {
-                holder.card.setStrokeColor(getResources().getColor(R.color.primary));
+                holder.card.setStrokeColor(getResources().getColor(R.color.primary, null));
                 holder.card.setStrokeWidth(4);
             } else {
-                holder.card.setStrokeColor(getResources().getColor(R.color.gray_light));
+                holder.card.setStrokeColor(getResources().getColor(R.color.gray_light, null));
                 holder.card.setStrokeWidth(2);
             }
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FoodShare</title>
+    <style>
+        :root { --primary: #1A6B3A; --secondary: #2D8A50; }
+        body { font-family: sans-serif; margin: 0; background: #f5f5f5; }
+        nav { background: var(--primary); color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+        .container { padding: 1rem; max-width: 800px; margin: 0 auto; }
+        .food-card { background: white; padding: 1rem; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .food-image { width: 80px; height: 80px; border-radius: 8px; background: #eee; margin-right: 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+        .food-info h3 { margin: 0; color: var(--primary); }
+        .food-info p { margin: 4px 0; color: #666; font-size: 0.9rem; }
+        .btn-post { background: white; color: var(--primary); padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav>
+        <span>FoodShare Dashboard</span>
+        <a href="post.html" class="btn-post">+ Post Food</a>
+    </nav>
+    <div class="container" id="food-list">
+        <!-- Real-time food items will appear here -->
+        <p>Loading available food...</p>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, query, where, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        const firebaseConfig = { projectId: "foodshare-placeholder" }; // Use full config in production
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const q = query(collection(db, "foods"), where("status", "==", "available"));
+        onSnapshot(q, (snapshot) => {
+            const listDiv = document.getElementById('food-list');
+            listDiv.innerHTML = '';
+            if (snapshot.empty) {
+                listDiv.innerHTML = '<p>No food available right now. Check back later!</p>';
+                return;
+            }
+            snapshot.forEach((doc) => {
+                const food = doc.data();
+                const card = `
+                    <div class="food-card">
+                        <div class="food-image">🍲</div>
+                        <div class="food-info">
+                            <h3>${food.foodName}</h3>
+                            <p>Quantity: ${food.quantity} ${food.unit}</p>
+                            <p>Location: ${food.city}</p>
+                        </div>
+                    </div>`;
+                listDiv.innerHTML += card;
+            });
+        });
+    </script>
+</body>
+</html>

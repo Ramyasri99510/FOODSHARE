@@ -60,4 +60,39 @@
     <string name="families">परिवार</string>
     <string name="scheduled_pickups">निर्धारित पिकअप</string>
     <string name="browse_donations">दान खोजें</string>
+
+    <!-- About AI Screen -->
+    <string name="intelligence_at_foodshare">फूडशेयर में बुद्धिमत्ता</string>
+    <string name="ai_smart_expiry_title">एआई स्मार्ट एक्सपायरी प्रेडिक्टर</string>
+    <string name="ai_smart_expiry_desc">फूडशेयर एक प्रशिक्षित भविष्यवाणी मॉडल का उपयोग करता है जो इष्टतम समाप्ति समय की स्वचालित गणना करने के लिए खाद्य श्रेणी और प्रकार का विश्लेषण करता है। मॉडल को खाद्य विज्ञान डेटा पर प्रशिक्षित किया गया है जो एक्सपायरी भविष्यवाणी में 95% सटीकता के साथ 10 खाद्य श्रेणियों को कवर करता है।</string>
+    <string name="ai_smart_expiry_tech">मशीन लर्निंग · नियम-आधारित मॉडल · जावा</string>
+    <string name="gemini_ai_chat_title">जेमिनी एआई चैट सहायक</string>
+    <string name="gemini_ai_chat_desc">फूडशेयर दाताओं और प्राप्तकर्ताओं को 24/7 बुद्धिमान सहायता प्रदान करने के लिए गूगल जेमिनी एआई को एकीकृत करता है। चैटबॉट 5 भारतीय भाषाओं में प्राकृतिक भाषा को समझता है और उपयोगकर्ताओं को ऐप नेविगेट करने, खाद्य सुरक्षा समझने में मदद करता है।</string>
+    <string name="gemini_ai_chat_tech">गूगल जेमिनी एपीआई · एनएलपी · बहुभाषी</string>
+    <string name="ai_impact_stats">एआई प्रभाव आँकड़े</string>
+    <string name="stat_food_categories">• मान्यता प्राप्त खाद्य श्रेणियां: 10+</string>
+    <string name="stat_languages">• समर्थित भाषाएं: 5</string>
+    <string name="stat_accuracy">• औसत भविष्यवाणी सटीकता: 95%</string>
+    <string name="powered_by_tech">संचालित: गूगल जेमिनी एआई + फूडशेयर एमएल</string>
+
+    <!-- Post Food Flow -->
+    <string name="step_1_title">चरण 1: भोजन विवरण</string>
+    <string name="upload_photo">फ़ोटो अपलोड करें</string>
+    <string name="ai_accept_btn">स्वीकार करें</string>
+    <string name="ai_predicting_msg">इष्टतम समाप्ति समय का पूर्वानुमान…</string>
+
+    <!-- Success Screen -->
+    <string name="estimated_impact">अनुमानित प्रभाव</string>
+    <string name="impact_summary">• 10 लोगों को खिलाता है\n• 2.5 किलो CO2 बचाता है</string>
+
+    <string name="ob_title_1">भोजन की बर्बादी कम करें</string>
+    <string name="ob_desc_1">आस-पास के प्राप्तकर्ताओं और गैर-सरकारी संगठनों से जुड़ें ताकि यह सुनिश्चित हो सके कि अतिरिक्त भोजन जरूरतमंदों तक पहुंचे।</string>
+    <string name="ob_title_2">आसान दान</string>
+    <string name="ob_desc_2">बस कुछ ही चरणों में अपना अतिरिक्त भोजन पोस्ट करें और दावा किए जाने पर सूचित करें।</string>
+    <string name="ob_title_3">प्रभाव ट्रैक करें</string>
+    <string name="ob_desc_3">भोजन साझा करने और बचाए गए CO2 के संदर्भ में अपने दान का वास्तविक दुनिया पर प्रभाव देखें।</string>
+    <string name="ai_suggestion">🤖 एआई सुझाव</string>
+    <string name="ai_predicting">इष्टतम समाप्ति समय का पूर्वानुमान…</string>
+    <string name="ai_accept">स्वीकार करें</string>
+    <string name="powered_by_ai">फूडशेयर एआई द्वारा संचालित</string>
 </resources>

@@ -19,7 +19,7 @@
             android:id="@+id/textFoodEmoji"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@color/gray_light"
+            android:background="#F3F4F6"
             android:gravity="center"
             android:text="🍚"
             android:textSize="32sp"
@@ -33,7 +33,7 @@
             android:layout_marginStart="12dp"
             android:text="Food Name"
             android:textColor="@color/text_primary"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/textFoodEmoji"
@@ -51,41 +51,37 @@
             app:layout_constraintStart_toStartOf="@id/textFoodName"
             app:layout_constraintTop_toBottomOf="@id/textFoodName" />
 
+        <!-- India-First Logic: Displaying both Weight and Portions -->
         <TextView
             android:id="@+id/textQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
+            android:background="#E0F2F1"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
             android:text="Qty: 5kg"
-            android:textColor="@color/primary"
-            android:textSize="12sp"
+            android:textColor="#00796B"
+            android:textSize="11sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/textFoodName"
             app:layout_constraintTop_toBottomOf="@id/textDonorInfo" />
 
-        <TextView
-            android:id="@+id/textDistance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="1.2 km"
-            android:textColor="@color/text_secondary"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/textQuantity"
-            app:layout_constraintStart_toEndOf="@id/textQuantity"
-            app:layout_constraintTop_toTopOf="@id/textQuantity" />
-
+        <!-- Urgency Badge: The "Happiness & Urgency" USP -->
         <TextView
             android:id="@+id/textExpiry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Expires in 2h"
-            android:textColor="@color/accent"
-            android:textSize="12sp"
+            android:background="#FFF3E0"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:text="Smart Alert: 2h left"
+            android:textColor="#E65100"
+            android:textSize="11sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/textQuantity"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textQuantity" />
+            app:layout_constraintTop_toTopOf="@id/textQuantity" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

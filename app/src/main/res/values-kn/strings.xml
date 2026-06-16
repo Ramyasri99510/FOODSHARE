@@ -59,5 +59,40 @@
     <string name="food_kg">ಆಹಾರ (kg)</string>
     <string name="families">ಕುಟುಂಬಗಳು</string>
     <string name="scheduled_pickups">ನಿಗದಿಪಡಿಸಿದ ಪಿಕಪ್‌ಗಳು</string>
-    <string name="browse_donations">ದಾನಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ</string>
+    <string name="browse_donations">ದಾನಗಳನ್ನು ಬ್ರೌಜ್ ಮಾಡಿ</string>
+
+    <!-- About AI Screen -->
+    <string name="intelligence_at_foodshare">ಫುಡ್ ಶೇರ್ ಬುದ್ಧಿವಂತಿಕೆ</string>
+    <string name="ai_smart_expiry_title">AI ಸ್ಮಾರ್ಟ್ ಎಕ್ಸ್‌ಪೈರಿ ಪ್ರಿಡಿಕ್ಟರ್</string>
+    <string name="ai_smart_expiry_desc">ಉತ್ತಮ ಎಕ್ಸ್‌ಪೈರಿ ಸಮಯವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಲೆಕ್ಕಾಚಾರ ಮಾಡಲು ಆಹಾರ ವರ್ಗ ಮತ್ತು ಪ್ರಕಾರವನ್ನು ವಿಶ್ಲೇಷಿಸುವ ತರಬೇತಿ ಪಡೆದ ಭವಿಷ್ಯ ಮಾದರಿಯನ್ನು ಫುಡ್ ಶೇರ್ ಬಳಸುತ್ತದೆ. ಈ ಮಾದರಿಯು 10 ಆಹಾರ ವರ್ಗಗಳನ್ನು ಒಳಗೊಂಡಿರುವ ಆಹಾರ ವಿಜ್ಞಾನ ಡೇಟಾದ ಮೇಲೆ ತರಬೇತಿ ಪಡೆದಿದೆ, ಎಕ್ಸ್‌ಪೈರಿ ಭವಿಷ್ಯದಲ್ಲಿ 95% ನಿಖರತೆಯನ್ನು ಹೊಂದಿದೆ.</string>
+    <string name="ai_smart_expiry_tech">ಮಷೀನ್ ಲರ್ನಿಂಗ್ · ರೂಲ್-ಬೇಸ್ಡ್ ಮಾಡೆಲ್ · ಜಾವಾ</string>
+    <string name="gemini_ai_chat_title">ಜೆಮಿನಿ AI ಚಾಟ್ ಸಹಾಯಕ</string>
+    <string name="gemini_ai_chat_desc">ದಾನಿಗಳು ಮತ್ತು ಸ್ವೀಕೃತದಾರರಿಗೆ 24/7 ಬುದ್ಧಿವಂತ ಸಹಾಯವನ್ನು ನೀಡಲು ಫುಡ್ ಶೇರ್ ಗೂಗಲ್ ಜೆಮಿನಿ AI ಅನ್ನು ಸಂಯೋಜಿಸುತ್ತದೆ. ಚಾಟ್‌ಬಾಟ್ 5 ಭಾರತೀಯ ಭಾಷೆಗಳಲ್ಲಿ ನೈಸರ್ಗಿಕ ಭಾಷೆಯನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುತ್ತದೆ ಮತ್ತು ಬಳಕೆದಾರರಿಗೆ ಅಪ್ಲಿಕೇಶನ್ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.</string>
+    <string name="gemini_ai_chat_tech">ಗೂಗಲ್ ಜೆಮಿನಿ API · NLP · ಬಹುಭಾಷಾ</string>
+    <string name="ai_impact_stats">AI ಪರಿಣಾಮದ ಅಂಕಿಅಂಶಗಳು</string>
+    <string name="stat_food_categories">• ಗುರುತಿಸಲಾದ ಆಹಾರ ವರ್ಗಗಳು: 10+</string>
+    <string name="stat_languages">• ಬೆಂಬಲಿತ ಭಾಷೆಗಳು: 5</string>
+    <string name="stat_accuracy">• ಸರಾಸರಿ ಭವಿಷ್ಯದ ನಿಖರತೆ: 95%</string>
+    <string name="powered_by_tech">ಪವರ್ಡ್ ಬೈ: ಗೂಗಲ್ ಜೆಮಿನಿ AI + ಫುಡ್ ಶೇರ್ ML</string>
+
+    <!-- Post Food Flow -->
+    <string name="step_1_title">ಹಂತ 1: ಆಹಾರದ ವಿವರಗಳು</string>
+    <string name="upload_photo">ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="ai_accept_btn">ಒಪ್ಪಿಕೊಳ್ಳಿ</string>
+    <string name="ai_predicting_msg">ಅವಧಿ ಮುಗಿಯುವ ಸಮಯವನ್ನು ಊಹಿಸಲಾಗುತ್ತಿದೆ…</string>
+
+    <!-- Success Screen -->
+    <string name="estimated_impact">ಅಂದಾಜು ಪರಿಣಾಮ</string>
+    <string name="impact_summary">• 10 ಜನರಿಗೆ ಆಹಾರ ನೀಡುತ್ತದೆ\n• 2.5kg CO2 ಉಳಿಸುತ್ತದೆ</string>
+
+    <string name="ob_title_1">ಆಹಾರದ ವ್ಯರ್ಥವನ್ನು ಕಡಿಮೆ ಮಾಡಿ</string>
+    <string name="ob_desc_1">ಹೆಚ್ಚುವರಿ ಆಹಾರವು ಅಗತ್ಯವಿರುವವರಿಗೆ ತಲುಪುತ್ತದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಹತ್ತಿರದ ಸ್ವೀಕೃತದಾರರು ಮತ್ತು NGO ಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಿ.</string>
+    <string name="ob_title_2">ಸುಲಭ ದಾನ</string>
+    <string name="ob_desc_2">ಕೆಲವೇ ಹಂತಗಳಲ್ಲಿ ನಿಮ್ಮ ಹೆಚ್ಚುವರಿ ಆಹಾರವನ್ನು ಪೋಸ್ಟ್ ಮಾಡಿ ಮತ್ತು ಅದನ್ನು ಪಡೆದಾಗ ಸೂಚನೆ ಪಡೆಯಿರಿ.</string>
+    <string name="ob_title_3">ಪರಿಣಾಮವನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</string>
+    <string name="ob_desc_3">ಹಂಚಿದ ಊಟಗಳು ಮತ್ತು ಉಳಿಸಿದ CO2 ವಿಷಯದಲ್ಲಿ ನಿಮ್ಮ ದಾನಗಳ ನೈಜ-ಪ್ರಪಂಚದ ಪರಿಣಾಮವನ್ನು ನೋಡಿ.</string>
+    <string name="ai_suggestion">🤖 AI ಸಲಹೆ</string>
+    <string name="ai_predicting">ಅವಧಿ ಮುಗಿಯುವ ಸಮಯವನ್ನು ಊಹಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="ai_accept">ಒಪ್ಪಿಕೊಳ್ಳಿ</string>
+    <string name="powered_by_ai">ಫುಡ್ ಶೇರ್ AI ನಿಂದ ಚಾಲಿತವಾಗಿದೆ</string>
 </resources>

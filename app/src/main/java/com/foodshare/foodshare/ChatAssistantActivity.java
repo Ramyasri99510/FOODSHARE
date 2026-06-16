@@ -1,6 +1,9 @@
 package com.foodshare.foodshare;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +11,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +33,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -38,10 +45,21 @@ public class ChatAssistantActivity extends BaseActivity {
     private EditText etMessage;
     private ChipGroup cgSuggestions;
     private GenerativeModelFutures model;
+    private TextToSpeech tts;
     
-    // Set your API key here for Gemini to work. 
-    // If left as "YOUR_API_KEY", the app will use built-in smart responses for demonstration.
     private static final String GEMINI_API_KEY = "YOUR_API_KEY";
+
+    private final ActivityResultLauncher<Intent> voiceLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                    ArrayList<String> voiceResults = result.getData().getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    if (voiceResults != null && !voiceResults.isEmpty()) {
+                        sendMessage(voiceResults.get(0));
+                    }
+                }
+            }
+    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +74,7 @@ public class ChatAssistantActivity extends BaseActivity {
         rvChat = findViewById(R.id.rvChat);
         etMessage = findViewById(R.id.etMessage);
         FloatingActionButton btnSend = findViewById(R.id.btnSend);
+        FloatingActionButton btnMic = findViewById(R.id.btnMic);
         cgSuggestions = findViewById(R.id.cgSuggestions);
 
         adapter = new ChatAdapter(messages);
@@ -71,9 +90,29 @@ public class ChatAssistantActivity extends BaseActivity {
             }
         });
 
+        btnMic.setOnClickListener(v -> startVoiceInput());
+
         setupSuggestions();
 
-        addMessage(new ChatMessage("Hello! I am FoodShare Assistant. How can I help you today?", false));
+        tts = new TextToSpeech(this, status -> {
+            if (status != TextToSpeech.ERROR) {
+                tts.setLanguage(Locale.getDefault());
+            }
+        });
+
+        addMessage(new ChatMessage("Hello! I am your FoodShare AI Assistant. Unlike foreign apps, we are built specifically for India and are 100% free. How can I help you share surplus food today?", false));
+    }
+
+    private void startVoiceInput() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak your question...");
+        try {
+            voiceLauncher.launch(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Voice recognition not supported on this device.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void setupSuggestions() {
@@ -91,11 +130,12 @@ public class ChatAssistantActivity extends BaseActivity {
         addMessage(typingMsg);
 
         if (model != null) {
-            // Real Gemini Logic
             Content content = new Content.Builder()
-                    .addText("You are FoodShare Assistant for the FoodShare app in India. " +
-                            "User Question: " + text + "\n" +
-                            "Respond helpfully and briefly. Respond in the same language as the user.")
+                    .addText("You are FoodShare Assistant, a specialized AI for a free food donation app in India. " +
+                            "IMPORTANT: Emphasize that we have a Smart Expiry engine that foreign apps like OLIO don't have. " +
+                            "Mention that we support NGOs with bulk pickup tools. " +
+                            "Always be friendly, brief, and professional. Respond in the same language as the user. " +
+                            "User Question: " + text)
                     .build();
 
             Executor executor = Executors.newSingleThreadExecutor();
@@ -106,7 +146,9 @@ public class ChatAssistantActivity extends BaseActivity {
                 public void onSuccess(GenerateContentResponse result) {
                     runOnUiThread(() -> {
                         messages.remove(typingMsg);
-                        addMessage(new ChatMessage(result.getText(), false));
+                        String aiReply = result.getText();
+                        addMessage(new ChatMessage(aiReply, false));
+                        speak(aiReply);
                     });
                 }
 
@@ -114,33 +156,50 @@ public class ChatAssistantActivity extends BaseActivity {
                 public void onFailure(@NonNull Throwable t) {
                     runOnUiThread(() -> {
                         messages.remove(typingMsg);
-                        addMessage(new ChatMessage("Error connecting to Gemini. Using local help instead: " + getSmartResponse(text), false));
+                        String fallback = getSmartResponse(text);
+                        addMessage(new ChatMessage(fallback, false));
+                        speak(fallback);
                     });
                 }
             }, executor);
         } else {
-            // Smart Local Logic for Demo
             rvChat.postDelayed(() -> {
                 messages.remove(typingMsg);
-                addMessage(new ChatMessage(getSmartResponse(text), false));
+                String localResponse = getSmartResponse(text);
+                addMessage(new ChatMessage(localResponse, false));
+                speak(localResponse);
             }, 1000);
         }
     }
 
     private String getSmartResponse(String input) {
         String query = input.toLowerCase();
-        if (query.contains("donate")) return "To donate, tap 'Post Food' in your menu. Upload a photo, select the type (Rice, Curry, etc.), and follow the AI expiry suggestion. It's that easy!";
-        if (query.contains("expiry") || query.contains("hours")) return "Our AI model suggests expiry times based on food science. For example, cooked food stays fresh for 4-6 hours, while fruits can last 72 hours.";
-        if (query.contains("claim")) return "Receivers can browse the 'Home' screen to find nearby food. Just tap 'Claim' to see the pickup location and donor details.";
-        if (query.contains("ngo")) return "NGOs can register during signup. They get access to bulk donations from restaurants and wedding halls!";
-        if (query.contains("safety")) return "Always ensure food is stored in clean containers. Our AI expiry predictor helps you stay within safe consumption windows.";
-        return "I can help you with donations, claiming food, or understanding our AI features. Just ask!";
+        if (query.contains("donate")) return "To donate, tap '+' in the menu. Pick the food type, and our AI will suggest an expiry time to ensure it reaches someone before spoiling!";
+        if (query.contains("ngo")) return "NGOs get a special dashboard to manage bulk pickups from hotels and events. We are the first app in India to offer this!";
+        if (query.contains("free")) return "FoodShare is 100% free for everyone. There are no fees or hidden costs, unlike paid surplus apps.";
+        if (query.contains("expiry")) return "Our AI Smart Expiry engine notifies receivers exactly 2 hours before food expires, making us much faster and safer than other apps.";
+        return "I can help with donations, NGO support, or explain our Smart Expiry system. What's on your mind?";
+    }
+
+    private void speak(String text) {
+        if (tts != null) {
+            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
+        }
     }
 
     private void addMessage(ChatMessage msg) {
         messages.add(msg);
-        adapter.notifyDataSetChanged();
+        adapter.notifyItemInserted(messages.size() - 1);
         rvChat.scrollToPosition(messages.size() - 1);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
     }
 
     private static class ChatMessage {

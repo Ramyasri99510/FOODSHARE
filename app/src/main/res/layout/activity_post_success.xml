@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/textEmojiSuccess"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginTop="64dp"
-        android:background="@color/gray_light"
+        android:background="#F0FDF4"
         android:gravity="center"
         android:text="🎉"
-        android:textSize="64sp"
+        android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,10 +23,10 @@
         android:id="@+id/textSuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/success"
+        android:layout_marginTop="32dp"
+        android:text="Heroic Act!"
         android:textColor="@color/primary"
-        android:textSize="28sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,38 +38,41 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="@string/post_success_msg"
+        android:text="Your surplus food is now visible to nearby families and NGOs. Our Smart Expiry engine is already searching for a match!"
         android:textColor="@color/text_primary"
-        android:textSize="18sp"
+        android:textSize="17sp"
         app:layout_constraintTop_toBottomOf="@id/textSuccess" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardImpact"
+        android:id="@+id/cardJoyStats"
         style="@style/AppCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
+        app:cardBackgroundColor="#F9FAFB"
         app:layout_constraintTop_toBottomOf="@id/textMessage">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/est_impact"
-                android:textColor="@color/primary"
+                android:text="Your Positive Impact Today"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="• Feeds 10 people\n• Saves 2.5kg CO2"
-                android:textColor="@color/text_secondary" />
+                android:layout_marginTop="12dp"
+                android:text="🍎 You saved approx. 10 meals\n🌍 You prevented 2.5kg of CO2 emissions\n🤝 You are supporting your local community"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="6dp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -77,10 +80,10 @@
         android:id="@+id/btnViewListings"
         style="@style/AppButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="@string/my_listings"
-        app:layout_constraintTop_toBottomOf="@id/cardImpact" />
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="Track My Donation"
+        app:layout_constraintTop_toBottomOf="@id/cardJoyStats" />
 
     <Button
         android:id="@+id/btnGoHome"
@@ -88,7 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/donor_home"
+        android:text="Back to Home"
         android:textColor="@color/secondary"
         app:layout_constraintTop_toBottomOf="@id/btnViewListings" />
 
